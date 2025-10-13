@@ -126,6 +126,12 @@ screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
         grid-template-columns: repeat(2, 150px);
         gap: 20px;
     }
+
+    .navigation-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* Hero (section 1) - Home Page */

@@ -126,13 +126,27 @@ header {
     }
     
     .header-container {
-        width: 90%;
+        width: 100%;
+        height: auto;
         display: block;
     }
 
-    .nav-list li {
+    .nav-list li:last-child {
         display: block;
         margin: 5px 0;
+    }
+
+    .nav-list {
+        position: relative;
+        top: 0px;
+        left: 6px;
+        margin-bottom: 0;
+    }
+
+    .logo-container {
+        position: relative;
+        top: 0;
+        left: 10px;
     }
 }
 
@@ -310,7 +324,13 @@ header {
     }
 
     .hero-section {
-        width: 90%;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-image-container-first, .hero-image-container-second {
+        position: relative;
+        top: 0;
     }
     
     .hero-paragraph {
@@ -329,12 +349,33 @@ header {
         margin: 10px 0;
     }
 
+    .hero-text-container {
+        width: 350px;
+        left: 0;
+        margin-bottom: 30px;
+    }
+
     .company-motto {
         font-size: 38px;
     }
 
     .popular-title {
         font-size: 38px;
+    }
+
+    .popular-container {
+        position: relative;
+        top: 0;
+        width: 350px;
+    }
+    
+    .arrow-container {
+        position: inherit;
+    }
+
+    .popular-donut-list {
+        position: relative;
+        right: -40px;
     }
 }
 
@@ -547,21 +588,23 @@ footer {
 }
 
 .copyright {
+    position: relative;
+    top: 25px;
+    right: 255px;
     text-align: center;
     letter-spacing: 0.06em;
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 15px;
 }
 
 .footer-list {
     text-align: center;
-    margin-bottom: 15px;
+    position: relative;
+    left: 170px;
 }
 
 .footer-list li {
     display: inline-block;
-    margin: 0 15px;
 }
 
 footer .logo-title {
@@ -577,15 +620,31 @@ footer .logo {
 
 footer .logo-container {
     display: inline-block;
+    top: 26px;
+    left: 990px
 }
 
 @media screen and (max-width: 767px) {
     footer {
-        width: 90%;
+        width: 100%;
+    }
+
+    .copyright {
+        top: 0;
+        right: 0;
+    }
+
+    .footer-list {
+        left: -19px;
     }
 
     .footer-list li {
-        display: block;
         margin: 5px 0;
     }
+
+    footer .logo-container {
+    position: relative;
+    top: 0px;
+    left: 0px
+}
 }
