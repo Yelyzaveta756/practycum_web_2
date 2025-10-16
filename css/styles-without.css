@@ -4,8 +4,8 @@ body {
     font-family: "Urbanist", sans-serif;
     color:#363745;
     background: linear-gradient(to right, #cc99ff 0%, #ff66cc 100%);
-    margin: 0;
-    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .list {
@@ -126,7 +126,7 @@ header {
     }
     
     .header-container {
-        width: 100%;
+        width: 400px;
         height: auto;
         display: block;
     }
@@ -324,7 +324,7 @@ header {
     }
 
     .hero-section {
-        width: 100%;
+        width: 400px;
         height: auto;
     }
 
@@ -481,7 +481,7 @@ footer .logo-container {
 
 @media screen and (max-width: 767px) {
     footer {
-        width: 100%;
+        width: 400px;
     }
 
     .copyright {
