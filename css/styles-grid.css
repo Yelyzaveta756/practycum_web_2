@@ -112,9 +112,7 @@ header {
     transform: rotate(-5deg) scale(1.1);
 }
 
-@media screen and (min-resolution: 192dpi) and (max-width:767px), 
-screen and (min-resolution: 2dppx) and (max-width:767px),
-screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
+@media screen and (max-width:767px) {
     
     header {
         display: inline-block;
@@ -295,9 +293,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
 }
 
 
-@media screen and (min-resolution: 192dpi) and (max-width:767px), 
-screen and (min-resolution: 2dppx) and (max-width:767px),
-screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
+@media screen and (max-width:767px) {
     
     .hero-image {
         margin-bottom: 10px;
@@ -436,9 +432,7 @@ footer .logo {
     height: 60px;
 }
 
-@media screen and (min-resolution: 192dpi) and (max-width:767px), 
-screen and (min-resolution: 2dppx) and (max-width:767px),
-screen and (min-device-pixel-ratio: 2) and (max-width:767px) {
+@media screen and (max-width:767px) {
     
     footer {
         width: 400px;
