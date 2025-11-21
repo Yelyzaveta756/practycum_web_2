@@ -41,18 +41,16 @@ button {
 /* Header */
 
 header {
-    display: grid;
-    place-items: center;
     margin: 30px auto;
-    width: 1280px;
 }
 
-.header-container {
+.navigation-container {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.3; 
     letter-spacing: 0.06em;
-    width: 1280px;
+    max-width: 1280px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 0.8fr auto;
     align-items: center;
@@ -104,6 +102,7 @@ header {
 .logo {
     width: 85px;
     height: 85px;
+    min-width: 85px;
     transition: transform 0.3s ease;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
@@ -112,29 +111,30 @@ header {
     transform: rotate(-5deg) scale(1.1);
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
     
-    header {
-        display: inline-block;
-    }
-    
-    .header-container {
-        width: 400px;
-        display: inline-block;
+    .navigation-container {
+        max-width: 400px;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
     }
 
     .nav-list {
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    .navigation-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .logo-title {
+        font-size: 30px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
     }
 }
-
 /* Hero (section 1) - Home Page */
 
 .hero-section {
@@ -143,7 +143,7 @@ header {
     line-height: 1.4; 
     letter-spacing: 0.06em;
     background-color: #f4e0f4;
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto 30px;
     padding: 20px 25px;
     border-radius: 30px;
@@ -154,14 +154,15 @@ header {
 
 .hero-grid-container{
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr auto;
     gap: 30px;
 }
 
 .hero-image-text {
     display: grid;
-    grid-template-columns: 0.86fr 1.6fr;
-    align-items: center;
+    grid-template-columns: 0.6fr 1.6fr;
+    align-items: start;
+    justify-items: center;
     gap: 15px
 }
 
@@ -173,6 +174,17 @@ header {
 
 .hero-image {
     border-radius: 30px;
+    width: 200px;
+    height: 180px;
+    min-width: 210px;
+}
+
+.hero-image-third {
+    display: none;
+    border-radius: 30px;
+    width: 200px;
+    height: 180px;
+    min-width: 210px;
 }
 
 .company-motto {
@@ -198,17 +210,21 @@ header {
     padding-bottom: 20px;
 }
 
-.menu-link {
-    font-size: 22px;
+.menu-button {
+    font-size: 20px;
     font-weight: 600;
     color: inherit;
     padding: 16px;
     background: linear-gradient(to right, #cc99ff 0%, #ff66cc 100%);
-    color: rgb(255, 243, 254);
     border-radius: 30px;
+    border: none;
 }
 
-.menu-link:hover {
+.menu-link {
+    color: rgb(255, 243, 254);
+}
+
+.menu-button:hover, .menu-button:focus {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(255, 102, 204, 0.3);
 }
@@ -216,12 +232,12 @@ header {
 .arrow-icon {
     fill: currentColor;                 
     transition: transform 0.3s ease;
-    width: 45px;
 }
 
 .arrow-container {
     position: relative;
     display: grid;
+    grid-template-rows: 0.5fr auto;
     max-width: 350px;
 }
 
@@ -243,6 +259,7 @@ header {
     transition: all 0.3s ease;
     color: rgb(255, 243, 254);
     font-weight: 600;
+    max-height: 100px;
 }
 
 .arrow-label:hover {
@@ -293,22 +310,19 @@ header {
 }
 
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
     
     .hero-image {
         margin-bottom: 10px;
     }
 
     .hero-section {
-        width: 400px;
+        max-width: 400px;
         grid-template-columns: 1fr;
-        margin: 0;
+        margin: 0 auto;
     }
     .hero-image-text {
         display: inline-block;
-    }
-    .hero-paragraph {
-        padding-bottom: 10px;
     }
 
     .arrow-container {
@@ -338,12 +352,26 @@ header {
     }
 }
 
+@media screen and (min-width:769px) {
+
+    .hero-image-third {
+        display: grid;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .hero-image-third {
+        display: none;
+    }
+}
+
 /* Overlay  */
 
 .additional-info {
     position: absolute;
     top: 75px;
-    right: 370px;
+    right: 350px;
     width: 570px;
     background: #f8ecf8;
     border-radius: 15px;
@@ -397,7 +425,7 @@ header {
 footer {
     background: #f4e0f4;
     padding: 25px 35px;
-    width: 1280px;
+    max-width: 1280px;
     margin: 30px auto;
     border-radius: 30px;
     display: grid;
@@ -430,13 +458,14 @@ footer .logo-title {
 footer .logo {
     width: 60px;
     height: 60px;
+    min-width: 60px;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
     
     footer {
-        width: 400px;
-        margin: 20px 0;
+        max-width: 400px;
+        margin: 20px auto;
         padding: 20px;
         grid-template-columns: 1fr;
         gap: 10px;
