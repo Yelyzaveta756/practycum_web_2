@@ -92,6 +92,7 @@ header {
 }
 
 .logo-title {
+    text-align: center;
     font-size: 36px;
     background: linear-gradient(to right, #b270f4 0%, #ff66cc 100%);
     background-clip: text;

@@ -92,11 +92,13 @@ header {
     text-align: center;
     cursor: pointer;
     position: absolute;
-    left: 920px;
+    min-width: 255px;
+    left: 950px;
+    top: 24px;
 }
 
 .logo-title {
-    font-size: 36px;
+    font-size: 27px;
     background: linear-gradient(to right, #b270f4 0%, #ff66cc 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -107,8 +109,8 @@ header {
 }
 
 .logo {
-    width: 85px;
-    height: 85px;
+    width: 60px;
+    height: 60px;
     transition: transform 0.3s ease;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     display: inline-block;
@@ -151,11 +153,17 @@ header {
     }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 769px) and (max-width: 1158px){
 
     .logo-container{
-        left: 650px
+        left: 630px;
+        top: 24px;
     }
+
+    .nav-list {
+        max-width: 570px;
+        top: 20px;
+    }  
     
 }
 
@@ -181,11 +189,19 @@ header {
 
 .hero-image-container-first {
     position: absolute;
+    width: 210px;
+    height: 180px;
 }
 
 .hero-image-container-second {
     position: absolute;
-    top: 240px
+    top: 176px;
+    width: 210px;
+    height: 180px;
+}
+
+.hero-image-container-third{
+    display: none;
 }
 
 .hero-image {
@@ -208,7 +224,7 @@ header {
     text-align: center;
     width: 550px;
     position: relative;
-    left: 320px;
+    left: 220px;
 }
 
 .hero-paragraph {
@@ -245,10 +261,13 @@ header {
 }
 
 .arrow-container {
-    position: relative;
-    max-width: 350px;
+    position: absolute;
+    max-width: 400px;
+    min-width: 400px;
+    min-height: 550px;
     float: right;
-    bottom: 462px;
+    bottom: 122px;
+    left: 805px
 }
 
 .arrow-toggle {
@@ -341,6 +360,13 @@ header {
     .hero-image-container-first, .hero-image-container-second {
         position: relative;
         top: 0;
+        margin: 0 auto;
+        width: 300px;
+        height: 210px;
+    }
+
+    .hero-image-third {
+        display: none;
     }
 
     .arrow-container {
@@ -380,6 +406,38 @@ header {
     .popular-donut-list {
         position: relative;
         right: -40px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1158px){
+
+    .hero-text-container {
+        max-width: 300px;
+    }
+
+    .arrow-container {
+        min-width: 300px;
+        bottom: 315px;
+        left: 570px;
+        min-height: 760px;
+        max-width: 0;
+    }
+
+    .popular-container {
+        max-width: 600px;
+        top: 860px
+    }
+
+    .hero-section {
+        height: 1090px;
+    }
+
+    .hero-image-container-third {
+        display: inline-block;
+        width: 210px;
+        height: 180px;
+        position: absolute;
+        top: 333px;
     }
 }
 
@@ -443,13 +501,14 @@ footer {
     margin: 30px auto;
     border-radius: 30px;
     text-align: center;
-    position: relative;
+}
+
+.footer-list-container {
+    display: inline-block;
 }
 
 .copyright {
-    position: relative;
-    top: 25px;
-    right: 255px;
+    display: inline-block;
     text-align: center;
     letter-spacing: 0.06em;
     font-size: 16px;
@@ -458,8 +517,7 @@ footer {
 
 .footer-list {
     text-align: center;
-    position: relative;
-    left: 170px;
+    display: inline-block;
 }
 
 .footer-list li {
@@ -478,23 +536,15 @@ footer .logo {
 }
 
 footer .logo-container {
-    display: inline-block;
-    top: 26px;
-    left: 990px
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 @media screen and (max-width: 768px) {
+
     footer {
         max-width: 400px;
-    }
-
-    .copyright {
-        top: 0;
-        right: 0;
-    }
-
-    .footer-list {
-        left: -19px;
     }
 
     .footer-list li {
@@ -503,7 +553,8 @@ footer .logo-container {
 
     footer .logo-container {
     position: relative;
-    top: 0px;
-    left: 0px
+    left: 0;
+    right: 0;
 }
 }
+
