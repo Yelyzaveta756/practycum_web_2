@@ -416,16 +416,16 @@ header {
     }
 
     .arrow-container {
-        min-width: 300px;
-        bottom: 315px;
-        left: 570px;
+        min-width: 235px;
+        bottom: 228px;
+        left: 557px;
         min-height: 760px;
         max-width: 0;
     }
 
     .popular-container {
         max-width: 600px;
-        top: 860px
+        top: 872px
     }
 
     .hero-section {
